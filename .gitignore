@@ -1,0 +1,41 @@
+node_modules
+/node_modules
+/.sublime-grunt.cache
+/*.sublime-project
+/*.sublime-workspace
+/.sass-cache
+/Gruntfile.js
+
+/.sass-cache
+# Ignore everything in the wordpress root except the "wp-content" directory.
+# Ignore OS generated files #
+# Ignore everything in the "themes" directory, except the themes you
+/*.cache
+/.htaccess
+._*
+.Trashes
+# /wordpress/*
+######################
+*.Trashes
+# and "themes" directories.
+# specify (see the commented-out examples for hints on how to do this.)
+# /wordpress/wp-content/*
+/node_modules
+# /wordpress/wp-content/themes/
+# Ignore everything in the "plugins" directory, except the plugins you
+.Spotlight-V100
+/bower_components
+# Ignore everything in the "wp-content" directory, except the "plugins"
+!.gitignore
+ehthumbs.db
+
+/deploy
+.DS_Store
+*[Tt]humbs.db
+/*.sublime-*
+# WORDPRESS SPECIFIC #
+.DS_Store?
+# specify (see the commented-out example for a hint on how to do this.)
+#############################
+/robots.txt
+/wordpress/wp-content/plugins/*
