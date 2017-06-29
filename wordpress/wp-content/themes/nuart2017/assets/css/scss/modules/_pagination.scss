@@ -1,0 +1,137 @@
+.module {
+
+    &__artist-pagination {
+        width: 100%;
+        height: $large-spacing;
+        background-color: $white;
+        display: flex;
+        flex-wrap: no-wrap;
+        flex-direction: row;
+        justify-content: space-between;
+        overflow: hidden;
+    }
+
+    &__artist-pagination-container {
+        position: relative;
+    }
+
+    &__artist-pagination-link {
+        display: block;
+        @include subtitle-text($purple);
+        line-height: 2.8;
+
+        &--prev {
+            margin-left: 50px;
+
+            @media screen and (max-width: 650px) {
+                margin-left: 35px;
+            }
+
+            &:before {
+                content: url(../img/icons/svg/arrow-left-primary.svg);
+                width: 30px;
+                display: block;
+                position: absolute;
+                top: 7px;
+                left: 20px;
+
+                @media screen and (max-width: 650px) {
+                   left: 5px;
+                }
+            }
+
+
+        }
+
+        &--next {
+            margin-right: 50px;
+
+            @media screen and (max-width: 650px) {
+                margin-right: 35px;
+            }
+
+            &:after {
+                content: url(../img/icons/svg/arrow-right-primary.svg);
+                width: 30px;
+                display: block;
+                position: absolute;
+                top: 5px;
+                right: 20px;
+
+                @media screen and (max-width: 650px) {
+                    right: 5px;
+                }
+            }
+        }
+    }
+
+    &__artist-pagination-span {
+        @media screen and (max-width: 650px) {
+            display: none;
+        }
+    }
+
+
+    &__post-pagination {
+        width: 100%;
+        height: $large-spacing;
+        background-color: $white;
+        display: flex;
+        flex-wrap: no-wrap;
+        flex-direction: row;
+        justify-content: space-between;
+        overflow: hidden;
+    }
+
+    &__post-pagination-container {
+        position: relative;
+    }
+
+    &__post-pagination-link {
+        display: block;
+        @include subtitle-text($purple);
+        line-height: 2.8;
+
+        &--prev {
+            margin-left: 50px;
+
+            @media screen and (max-width: 650px) {
+                margin-left: 35px;
+            }
+
+            &:before {
+                content: url(../img/icons/svg/arrow-left-primary.svg);
+                width: 30px;
+                display: block;
+                position: absolute;
+                top: 7px;
+                left: 20px;
+
+                @media screen and (max-width: 650px) {
+                   left: 5px;
+                }
+            }
+        }
+
+        &--next {
+            margin-right: 50px;
+
+            @media screen and (max-width: 650px) {
+                margin-right: 35px;
+            }
+
+            &:after {
+                content: url(../img/icons/svg/arrow-right-primary.svg);
+                width: 30px;
+                display: block;
+                position: absolute;
+                top: 5px;
+                right: 20px;
+
+                @media screen and (max-width: 650px) {
+                    right: 5px;
+                }
+            }
+        }
+    }
+}

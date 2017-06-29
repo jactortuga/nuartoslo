@@ -1,0 +1,48 @@
+@mixin title-text($color) {
+    font-family: 'GraniteHeadline-Regular', Helvetica, Arial, sans-serif;
+    font-size: $large-font;
+    line-height: 1.3;
+    color: $color;
+}
+
+@mixin subtitle-text($color) {
+    font-family: 'GraniteHeadline-Regular', Helvetica, Arial, sans-serif;
+    font-size: $medium-font;
+    line-height: 1.6;
+    color: $color;
+}
+
+@mixin large-text($color) {
+    font-family: 'NeueHaasUnicaPro-Regular', Helvetica, Arial, sans-serif;
+    font-size: $large-font;
+    line-height: 1.2;
+    color: $color;
+}
+
+@mixin medium-text($color) {
+    font-family: 'NeueHaasUnicaPro-Regular', Helvetica, Arial, sans-serif;
+    font-size: $medium-font;
+    line-height: 1.2;
+    color: $color;
+}
+
+@mixin small-text($color) {
+    font-family: 'NeueHaasUnicaPro-Regular', Helvetica, Arial, sans-serif;
+    font-size: $small-font;
+    line-height: 1.2;
+    color: $color;
+}
+
+@mixin italic-text($color, $font-size) {
+    font-family: 'NeueHaasUnicaPro-Italic', Helvetica, Arial, sans-serif;
+    font-size: $font-size;
+    line-height: 1.2;
+    color: $color;
+}
+
+@mixin bold-text($color, $font-size) {
+    font-family: 'NeueHaasUnicaPro-Bold', Helvetica, Arial, sans-serif;
+    font-size: $font-size;
+    line-height: 1.2;
+    color: $color;
+}

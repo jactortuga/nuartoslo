@@ -1,0 +1,13 @@
+body:not(.page-template-home):not(.page-template-holding) {
+    .site-footer {
+        padding: $medium-spacing 0;
+
+        &__title {
+            display: none;
+        }
+
+        &__contact {
+            display: none;
+        }
+    }
+}

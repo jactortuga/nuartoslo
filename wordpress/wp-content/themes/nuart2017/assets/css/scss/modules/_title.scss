@@ -1,0 +1,55 @@
+.module {
+
+    &__title {
+        height: $large-spacing;
+        background-color: $purple;
+        text-align: center;
+        @include title-text($white);
+
+        &--alt {
+            background-color: $white !important;
+            @include title-text($purple);
+        }
+
+        &--single {
+            width: 100%;
+
+            @media screen and (max-width: 800px) {
+                font-size: 34px;
+                line-height: 2;
+            }
+
+            @media screen and (max-width: $small-break) {
+                font-size: $medium-font;
+                line-height: 2.8;
+            }
+
+            @media screen and (max-width: 400px) {
+                font-size: 23px;
+                line-height: 3.1;
+            }
+
+            @media screen and (max-width: $smallest-break) {
+                font-size: $small-font;
+                line-height: 3.6;
+            }
+        }
+
+        &--double {
+            &:first-of-type {
+                background-color: $white;
+                @include title-text($purple);
+            }
+
+            &:last-of-type {
+                background-color: $purple;
+                @include title-text($white);
+            }
+        }
+    }
+
+    
+    &__title-link {
+        color: $purple;
+    }
+}

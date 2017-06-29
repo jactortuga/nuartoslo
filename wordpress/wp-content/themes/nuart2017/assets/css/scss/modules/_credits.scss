@@ -1,0 +1,41 @@
+.site-credits {
+    width: 100%;
+    max-width: 1500px;
+    height: 30px;
+    margin: 0 auto;
+    background-color: $white;
+    position: fixed;
+    bottom: 0;
+    z-index: -1;
+
+    &__text {
+        width: calc(100% - #{$double-spacing});
+        margin: 0 auto;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        text-align: right;
+        font-family: 'Times New Roman', Helvetica, Arial, sans-serif;
+        color: $black;
+        font-size: $tiny-font;
+
+        @media screen and (max-width: $medium-break) {
+            width: calc(100% - #{$large-spacing});
+        }
+
+        @media screen and (max-width: $small-break) {
+            width: 95%;
+            font-size: 14px;
+            
+        }
+
+        @media screen and (max-width: 360px) {
+            font-size: 12px;
+        }
+    }
+
+    &__link {
+        color: $black;
+        text-decoration: underline;
+    }
+}

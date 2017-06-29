@@ -1,0 +1,102 @@
+.subheader {
+    width: 100%;
+
+    &--image { 
+        height: calc(100vh - #{$large-spacing});
+    }
+
+    &--video {
+        height: auto;
+    }
+
+    &__logo-container {
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+
+        &--image {
+            height: 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            background-attachment: fixed;
+
+            @media screen and (min-aspect-ratio: 1/1) {
+                background-position: center top;
+            }
+
+            @media screen and (max-width: $medium-break) {
+                background-attachment: initial;
+            }
+        }
+
+        &--video {
+            height: auto;
+        }
+    }
+
+    &__video-container {
+        max-width: 100%;
+        height: 0;
+        position: relative;
+        padding-bottom: 56.25%;
+        overflow: hidden;
+        height: auto;
+
+        & iframe, & object, & embed {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;  
+        }
+    }
+
+    &__bg-image {
+        width: 100%;
+        height: calc(100% - #{$large-spacing});
+        position: absolute;
+        top: 0;
+    }
+
+    &__logo-image {
+        width: 100%;
+        height: calc(100% - #{$large-spacing});
+        position: absolute;
+        top: 0;
+        opacity: 0;
+        z-index: 1;
+
+        @media screen and (min-aspect-ratio: 1/1) {
+            width: 80%;
+            margin: 0 auto;
+            left: 0;
+            right: 0;
+        }
+    }
+
+    &__logo-caption {
+        width: 100%;
+        height: $large-spacing;
+        position: absolute;
+        bottom: 0;
+        background-color: $purple;
+        text-align: center;
+        @include title-text($white);
+
+        // @media screen and (max-width: $smallest-break) {
+        //     font-size: 40px;
+        //     line-height: 1.6;
+        // }
+        
+        @media screen and (max-width: $small-break) {
+            font-size: $medium-font;
+            line-height: 2.8;
+        }
+
+        @media screen and (max-width: $smallest-break) {
+            font-size: $small-font;
+            line-height: 3.6;
+        }
+    }
+}

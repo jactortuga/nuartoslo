@@ -1,0 +1,50 @@
+.page-template-holding {
+
+    .site-header {
+        // height: 10px;
+
+        &__nav {
+            display: none;
+        }
+
+        &__social-nav {
+            width: 60%;
+            margin: 0 auto;
+            right: 0;
+            left: 0;
+            justify-content: center;
+        }
+
+        &__social-link {
+            height: 36px;
+            margin-top: 22px;
+            margin-right: 0;
+
+            &:last-of-type {
+                margin-right: 0;
+            }
+
+            &:not(:last-of-type) {
+                margin-right: $tiny-spacing;
+            }
+        }
+
+        &__social-icon {
+            height: 36px;
+        }
+    }
+
+    .hamburger {
+        @media screen and (max-width: $large-break) {
+            display: none;
+        }
+    }
+
+    .site-main {
+        // padding-top: 10px;
+    }
+
+    .subheader {
+        // height: calc(100vh - 10px);
+    }
+}

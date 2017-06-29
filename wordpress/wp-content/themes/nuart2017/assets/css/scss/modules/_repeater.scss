@@ -1,0 +1,170 @@
+.module {
+
+    &__repeater {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        background-color: $grey;
+    }
+
+    &__repeater-item {
+        width: calc(100% / 3);
+        position: relative;
+        overflow: hidden;
+        background-color: $dark-grey;
+        text-align: center;
+
+        &--artist {
+            height: 0;
+            padding-bottom: calc(100% / 3);
+
+            @media screen and (max-width: 950px) {
+                width: calc(100% / 2);
+                padding-bottom: calc(100% / 2);
+            }
+
+            @media screen and (max-width: 650px) {
+                width: calc(100%);
+                padding-bottom: calc(100%);
+            }
+        }
+
+        &--partner {
+            width: calc(100% / 4);
+            height: 250px;
+
+            @media screen and (max-width: 950px) {
+                width: calc(100% / 2);
+            }
+
+            @media screen and (max-width: 650px) {
+                height: 200px;
+                width: calc(100%);
+            }
+
+            &:nth-of-type(1) .module__repeater-item-image--partner {
+                max-height: 80px;
+
+                @media screen and (max-width: 1100px) {
+                    max-height: 70px;
+                }
+
+                @media screen and (max-width: 950px) {
+                    max-height: 80px;
+                }
+
+                @media screen and (max-width: 650px) {
+                    max-height: 90px;
+                }
+            }
+
+            &:nth-of-type(2) .module__repeater-item-image--partner {
+                max-height: 200px;
+
+                @media screen and (max-width: 1100px) {
+                    max-height: 180px;
+                }
+
+                @media screen and (max-width: 950px) {
+                    max-height: 200px;
+                }
+
+                @media screen and (max-width: 650px) {
+                    max-height: 160px;
+                }
+            }
+
+            &:nth-of-type(3) .module__repeater-item-image--partner {
+                max-height: 180px;
+
+                @media screen and (max-width: 1100px) {
+                    max-height: 160px;
+                }
+
+                @media screen and (max-width: 950px) {
+                    max-height: 180px;
+                }
+
+                @media screen and (max-width: 650px) {
+                    max-height: 140px;
+                }
+            }
+
+            &:nth-of-type(4) .module__repeater-item-image--partner {
+                max-height: 65px;
+
+                @media screen and (max-width: 1100px) {
+                    max-height: 50px;
+                }
+
+                @media screen and (max-width: 950px) {
+                    max-height: 65px;
+                }
+
+                @media screen and (max-width: 650px) {
+                    max-height: 75px;
+                }
+            }
+        }
+    }
+
+
+    &__repeater-item-image {
+        position: relative;
+        display: block;
+        z-index: 1;
+
+        &--artist {
+            width: 100%;
+            height: auto;
+        }
+
+        &--partner {
+            width: auto;
+            height: 100%;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+
+    &__repeater-item-content {
+        width: 80%;
+        margin: 0 auto;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        transform: translateY(-50%);
+
+        &--partner {
+            display: none;
+            opacity: 0;
+            transition: opacity 0.2s;
+        }
+    }
+
+    &__repeater-item-link {
+        color: $purple;
+    }
+
+    &__repeater-item-title {
+        padding-bottom: $small-spacing;
+        @include medium-text($purple);
+    }
+
+    &__repeater-item-text {
+        @include small-text($black);
+
+        @media screen and (min-width: 650px) and (max-width: 1200px) {
+            font-size: 16px;
+        }
+
+        @media screen and (max-width: 400px) {
+            font-size: 16px;
+        }
+    }
+}
+
+// FIREFOX HACK
+_:-moz-tree-row(hover), .module__repeater-item--artist  { height: auto; }

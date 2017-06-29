@@ -1,0 +1,119 @@
+.module {
+
+    &__newsletter {
+        width: 100%;
+        padding: $large-spacing 0;
+        background-color: $purple;
+        text-align: center;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: no-wrap;
+        justify-content: center;
+
+        @media screen and (max-width: $small-break) {
+            padding: $small-spacing 0;
+            flex-direction: column;
+        }
+    }
+
+    &__newsletter-information {
+        width: 25%;
+        margin: 0 $medium-spacing 0 0;
+        @include small-text($white);
+
+        @media screen and (max-width: $small-break) {
+            width: 90%;
+            margin: 0 auto $small-spacing auto;
+            font-size: 18px;
+        }
+    }
+
+    &__newsletter-input-container {
+        width: 370px;
+        height: 48px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: no-wrap;
+
+        @media screen and (max-width: $small-break) {
+            width: 290px;
+            height: 36px;
+            margin: 0 auto;
+        }
+    }
+
+    &__newsletter-input-email {
+        width: 250px;
+        height: 100%;
+        padding: 10px 20px;
+        box-sizing: border-box;
+        border: 2px solid $white;
+        @include small-text($black);
+        -webkit-appearance: none;
+        border-radius: 0;
+
+        &:focus {
+            outline: none;
+        }
+
+        @media screen and (max-width: $small-break) {
+            width: 170px;
+            padding: 5px;
+            font-size: 18px;
+        }
+    }
+
+    &__newsletter-input-submit {
+        width: 120px;
+        height: 100%;
+        padding: 0 $tiny-spacing $tiny-spacing $tiny-spacing;
+        border: 2px solid $white;
+        border-radius: 0;
+        background-color: $purple;
+        cursor: pointer;
+        @include subtitle-text($white);
+        line-height: 1;
+        -webkit-appearance: none;
+        
+        &:focus {
+            outline: none;
+        }
+
+        &:hover {
+            text-decoration: underline;
+        }
+
+        @media screen and (max-width: $small-break) {
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+
+    .mc4wp-form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+    }
+
+    .mc4wp-response {
+        width: 90%;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: 55px auto 0 auto;
+        @include small-text($white);
+
+        @media screen and (max-width: $small-break) {
+            font-size: 18px;
+            margin: $small-spacing auto 0 auto;
+            position: static;
+            left: auto;
+            right: auto;
+        }
+    }
+}
+
+// SAFARI 9+ HACK
+_::-webkit-:not(:root:root), .module__newsletter-input-email::-webkit-input-placeholder { line-height: 1.5; }

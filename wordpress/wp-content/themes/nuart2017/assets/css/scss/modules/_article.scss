@@ -1,0 +1,273 @@
+.module {
+
+    &__double-article {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        wrap: wrap;
+
+        @media screen and (max-width: $medium-break) {
+            flex-direction: column;
+        }
+    }
+
+    &__article-container {
+        width: 50%;
+        background-color: $white;
+
+        @media screen and (max-width: $medium-break) {
+            width: 100%;
+        }
+
+        .module__article {
+            padding: $medium-spacing;
+            box-sizing: border-box;
+
+            @media screen and (max-width: $small-break) {
+                padding: $medium-spacing 0;
+            }
+        }
+
+
+        &--double:first-of-type {
+            background-color: $purple;
+
+            .module__title {
+                background-color: $white;
+                @include title-text($purple);
+
+                @media screen and (max-width: $small-break) {
+                    font-size: $medium-font;
+                    line-height: 2.8;
+                }
+
+                @media screen and (max-width: $smallest-break) {
+                    font-size: $small-font;
+                    line-height: 3.6;
+                }
+            }
+
+            .module__article {
+                background-color: $purple;
+            }
+
+            .module__text-wrapper {
+                @include small-text($white);
+
+                @media screen and (max-width: $smallest-break) {
+                    font-size: $tiny-font;
+                }
+            }
+        }
+
+        &--special:first-of-type {
+            background-color: $purple;
+
+            .module__article {
+                background-color: $purple;
+            }
+
+            .module__text-wrapper {
+                @include small-text($white);
+            }
+        }
+    }
+
+    &__article {
+        width: 100%;
+        padding: $large-spacing 0;
+        background-color: $white;
+        overflow: hidden;
+
+        @media screen and (max-width: $medium-break) {
+            padding: $medium-spacing 0;
+        }
+
+        @media screen and (max-width: $small-break) {
+            width: 90%;
+            margin: 0 auto;
+        }
+
+
+        &--centered {
+            text-align: center;
+        }
+    }
+
+    &__text-wrapper {
+        margin: 0 auto;
+        max-width: $max-paragraph;
+        @include small-text($black);
+
+        &--left {
+            text-align: left;
+        }
+
+        a {
+            color: $purple;
+        }
+
+        em {
+            @include italic-text($black, $small-font);
+        }
+
+        strong {
+            @include bold-text($black, $small-font);
+        }
+
+        // Paragraph Variants
+        p.-left {
+            text-align: left;
+        }
+
+        p.-center {
+            text-align: center;
+        }
+
+        p.-right {
+            text-align: right;
+        }
+
+
+        p.-large {
+            @include large-text($black);
+
+            em {
+                @include italic-text($black, $large-font);
+            }
+
+            strong {
+                @include bold-text($black, $large-font);
+            }
+
+            @media screen and (max-width: $medium-break) {
+                font-size: $medium-font;
+
+                em {
+                    @include italic-text($black, $medium-font);
+                }
+
+                strong {
+                    @include bold-text($black, $medium-font);
+                }
+            }
+
+            @media screen and (max-width: $smallest-break) {
+                font-size: $small-font;
+
+                em {
+                    @include italic-text($black, $small-font);
+                }
+
+                strong {
+                    @include bold-text($black, $small-font);
+                }
+            }
+        }
+
+        p.-medium {
+            @include medium-text($black);
+
+            em {
+                @include italic-text($black, $medium-font);
+            }
+
+            strong {
+                @include bold-text($black, $medium-font);
+            }
+
+            @media screen and (max-width: $medium-break) {
+                font-size: $small-font;
+
+                em {
+                    @include italic-text($black, $small-font);
+                }
+
+                strong {
+                    @include bold-text($black, $small-font);
+                }
+            }
+
+            @media screen and (max-width: $smallest-break) {
+                font-size: $tiny-font;
+
+                em {
+                    @include italic-text($black, $tiny-font);
+                }
+
+                strong {
+                    @include bold-text($black, $tiny-font);
+                }
+            }
+        }
+
+        p.-small {
+            @include small-text($black);
+
+            em {
+                @include italic-text($black, $small-font);
+            }
+
+            strong {
+                @include bold-text($black, $small-font);
+            }
+
+            @media screen and (max-width: $medium-break) {
+                font-size: $tiny-font;
+
+                em {
+                    @include italic-text($black, $tiny-font);
+                }
+
+                strong {
+                    @include bold-text($black, $tiny-font);
+                }
+            }
+
+            @media screen and (max-width: $smallest-break) {
+                font-size: $smallest-font;
+
+                em {
+                    @include italic-text($black, $smallest-font);
+                }
+
+                strong {
+                    @include bold-text($black, $smallest-font);
+                }
+            }
+        }
+
+        @media screen and (max-width: $smallest-break) {
+            font-size: $tiny-font;
+        }
+    }
+
+
+
+    &__article-title {
+        margin: 0 auto;
+        max-width: $max-paragraph;
+        @include title-text($purple);
+
+        @media screen and (max-width: $small-break) {
+            font-size: $medium-font;
+            line-height: 1.2;
+        }
+
+        @media screen and (max-width: $smallest-break) {
+            font-size: $small-font;
+        }
+    }
+
+    &__article-title--padding {
+        padding-bottom: $medium-spacing;
+
+        @media screen and (max-width: $medium-break) {
+            padding-bottom: $small-spacing;
+        }
+
+        @media screen and (max-width: $smallest-break) {
+            padding-bottom: $tiny-spacing;
+        }
+    }
+}

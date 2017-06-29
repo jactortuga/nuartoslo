@@ -1,0 +1,15 @@
+.module {
+
+    &__divider {
+        width: 100%;
+        height: $large-spacing;
+
+        &--white {
+            background-color: $white;
+        }
+
+        &--primary {
+            background-color: $purple;
+        }
+    }
+}

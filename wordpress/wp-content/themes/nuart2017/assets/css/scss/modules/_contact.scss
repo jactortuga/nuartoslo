@@ -1,0 +1,162 @@
+.module {
+
+    &__contact {
+        width: 100%;
+        padding: $large-spacing 0;
+        background-color: $white;
+        text-align: center;
+
+        @media screen and (max-width: $medium-break) {
+            padding: $medium-spacing 0;
+        }
+
+        @media screen and (max-width: $small-break) {
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        .pirate_forms_wrap {
+            float: none;
+        }
+
+        .pirate_forms_thankyou_wrap {
+            font-size: $small-font;
+            margin-bottom: $medium-spacing;
+        }
+
+        .pirate_forms_error_box {
+            &:first-of-type {
+                font-size: $small-font;
+                margin-bottom: $tiny-spacing;
+            }
+
+            &:nth-last-of-type(2) {
+                margin-bottom: $medium-spacing;
+            }
+        }
+
+        .contact_name_wrap,
+        .contact_email_wrap,
+        .contact_subject_wrap {
+
+            input {
+                width: 400px;
+                height: $medium-spacing;
+                border: 2px solid $purple;
+                text-align: center;
+                padding: 0;
+                position: relative;
+                @include medium-text($purple);
+                line-height: 1.6;
+
+                @media screen and (max-width: $small-break) {
+                    width: 280px;
+                }
+
+                &:focus {
+                    outline-color: $purple;
+                }
+
+                &::-webkit-input-placeholder {
+                    color: $dark-grey;
+                }
+
+                &::-moz-placeholder {
+                    color: $dark-grey;
+                }
+
+                &:-ms-input-placeholder {
+                    color: $dark-grey;
+                }
+
+            }
+        }
+
+        .contact_message_wrap {
+            textarea {
+                width: 400px;
+                height: 150px;
+                border: 2px solid $purple;
+                position: relative;
+                @include small-text($purple);
+
+                @media screen and (max-width: $small-break) {
+                    width: 280px;
+                }
+
+                &:focus {
+                    outline-color: $purple;
+                }
+
+                &::-webkit-input-placeholder {
+                    position: relative;
+                    top: 45%;
+                    left: 0;
+                    transform: translateY(-45%);
+                    text-align: center;
+                    @include medium-text($dark-grey);
+                }
+                
+                &::-moz-placeholder {
+                    position: relative;
+                    top: 45%;
+                    left: 0;
+                    transform: translateY(-45%);
+                    text-align: center;
+                    @include medium-text($dark-grey);
+                }
+
+                &:-ms-input-placeholder {
+                    position: relative;
+                    top: 45%;
+                    left: 0;
+                    transform: translateY(-45%);
+                    text-align: center;
+                    @include medium-text($dark-grey);
+                }
+            }
+        }
+
+        .form_captcha_wrap {
+            width: 304px;
+            margin: 0 auto;
+
+            @media screen and (max-width: $small-break) {
+                width: 280px;
+
+                #rc-imageselect,
+                .g-recaptcha {
+                    transform:scale(0.922);
+                    transform-origin:0 0;
+                }
+            }
+        }
+
+        .contact_submit_wrap {
+            width: 140px;
+            margin: 40px auto 0 auto;
+
+            .pirate-forms-submit-button {
+                width: 100%;
+                height: $medium-spacing;
+                background-color: $purple;
+                @include medium-text($white);
+                cursor: pointer;
+                border: 2px solid $white;
+                padding: 5px;
+                box-sizing: content-box;
+                transition: background-color 0.25s linear, color 0.25s linear;
+
+                &:focus {
+                    outline: purple;
+                }
+
+                &.-state-hover {
+                    background-color: $white;
+                    border: 2px solid $purple;
+                    @include medium-text($purple);
+                }
+            }
+        }
+    }
+}

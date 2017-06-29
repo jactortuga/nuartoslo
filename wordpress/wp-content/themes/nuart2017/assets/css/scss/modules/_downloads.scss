@@ -1,0 +1,47 @@
+.module {
+
+    &__downloads {
+        width: 100%;
+        min-height: calc(100vh - 400px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &__downloads-item {
+        width: 500px;
+        text-align: left;
+        padding: $small-spacing 0;
+        margin: 0 auto;
+
+        &:not(:last-of-type) {
+            border-bottom: 1px solid $purple;
+        }
+
+        @media screen and (max-width: $small-break) {
+            width: 90%;
+        }
+    }
+
+    &__downloads-title {
+        @include subtitle-text($purple);
+        line-height: 1;
+        margin-bottom: $small-spacing;
+    }
+
+    &__downloads-link {
+        display: block;
+        margin-bottom: $tiny-spacing;
+        @include small-text($black);
+        font-size: $smallest-font;
+
+        &.-state-hover {
+            color: $purple;
+
+            // &:after {
+            //     content: 'download';
+            //     margin-left: $tiny-spacing;
+            // }
+        }
+    }
+}

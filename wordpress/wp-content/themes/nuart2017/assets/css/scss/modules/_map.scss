@@ -1,0 +1,42 @@
+.module {
+
+    &__map {
+        width: 100%;
+        height: calc(100vh - #{$tiny-spacing});
+    }
+
+    &__map-box {
+
+    }
+
+    &__map-box-title {
+        @include small-text($black);
+    }
+
+    &__map-box-body {
+
+    }
+
+    &__map-box-description {
+        margin: $tiny-spacing 0;
+        @include small-text($black);
+        font-size: $smallest-font;
+    }
+
+    &__map-box-image {
+        width: 100%;
+        height: auto;
+
+        @media screen and (max-width: $large-break) {
+            width: 80%;
+        }
+    }
+
+    &__map-info-container {
+        display: none;
+    }
+
+    &__map-info {
+        display: none;
+    }
+}

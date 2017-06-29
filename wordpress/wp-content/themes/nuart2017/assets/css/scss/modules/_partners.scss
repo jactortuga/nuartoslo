@@ -1,0 +1,65 @@
+.module {
+
+
+    &__partners {
+        width: 100%;
+        padding: $small-spacing $medium-spacing;
+        text-align: center;
+        overflow: hidden;
+        box-sizing: border-box;
+        background-color: $grey;
+
+        &.-state-first {
+            padding-top: $large-spacing;
+        }
+
+        &.-state-last {
+            padding-bottom: $large-spacing;
+        }
+
+        @media screen and (max-width: $small-break) {
+            padding: $small-spacing;
+        }
+    }
+
+    &__partners-title {
+        text-transform: uppercase;
+        padding-bottom: $small-spacing;
+        @include medium-text($purple);
+    }
+
+    &__partners-repeater {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    &__partners-item {
+        max-width: 120px;
+        max-height: 80px;
+        margin: $tiny-spacing;
+    }
+
+    &__partners-item-link {
+        width: 100%;
+        height: 100%;
+        display: block;
+    }
+
+    &__partners-item-image {
+        width: auto;
+        height: auto;
+        max-height: 100%;
+        max-width: 100%;
+        padding: 5px;
+        box-sizing: border-box;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+// SAFARI 9+ HACK
+_::-webkit-:not(:root:root), .module__partners-title { padding-bottom: $medium-spacing; }

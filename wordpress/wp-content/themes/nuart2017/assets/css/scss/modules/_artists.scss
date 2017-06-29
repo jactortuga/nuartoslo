@@ -1,0 +1,82 @@
+.module {
+
+    &__artists {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        background-color: $grey;
+    }
+
+    &__artists-item {
+        width: calc(100% / 3);
+        height: 0;
+        padding-bottom: calc(100% / 3);
+        position: relative;
+        overflow: hidden;
+        background-color: $dark-grey;
+        text-align: center;
+
+        @media screen and (max-width: 950px) {
+            width: calc(100% / 2);
+            padding-bottom: calc(100% / 2);
+        }
+
+        @media screen and (max-width: 650px) {
+            width: calc(100%);
+            padding-bottom: calc(100%);
+        }
+    }
+
+
+    &__artists-item-image {
+        width: 100%;
+        height: auto;
+        position: relative;
+        display: block;
+        z-index: 1;
+    }
+
+    &__artists-item-content {
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
+
+    &__artists-item-link {
+        width: 100%;
+        height: 100%;
+        color: $purple;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        &.-state-hover {
+            text-decoration: none !important;
+        }
+    }
+
+    &__artists-item-title {
+        padding-bottom: $small-spacing;
+        @include medium-text($purple);
+    }
+
+    &__artists-item-text {
+        @include small-text($black);
+
+        @media screen and (min-width: 650px) and (max-width: 1200px) {
+            font-size: 16px;
+        }
+
+        @media screen and (max-width: 400px) {
+            font-size: 16px;
+        }
+    }
+}
+
+// FIREFOX HACK
+_:-moz-tree-row(hover), .module__artists-item  { height: auto; }
