@@ -1,2 +1,0 @@
-# nuartoslo
-Nuart Oslo Website

@@ -1,0 +1,24 @@
+{
+  "name": "nuartoslo",
+  "version": "2.0.0",
+  "author": "tortugalabs",
+  "description": "Nuart Oslo Site",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jactortuga/nuartoslo.git"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.7.10",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^2.3.1",
+    "gulp-concat": "^2.5.2",
+    "gulp-group-css-media-queries": "^1.1.0",
+    "gulp-notify": "^2.2.0",
+    "gulp-sass": "^2.0.1",
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-svg-symbols": "^1.0.0",
+    "gulp-svg2png": "^1.0.0",
+    "gulp-uglify": "^1.2.0"
+  },
+  "dependencies": {}
+}
