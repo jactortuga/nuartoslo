@@ -18,7 +18,7 @@
     &__artist-pagination-link {
         display: block;
         @include subtitle-text($purple);
-        line-height: 2.8;
+        line-height: 3.2;
 
         &--prev {
             margin-left: 50px;
@@ -90,7 +90,7 @@
     &__post-pagination-link {
         display: block;
         @include subtitle-text($purple);
-        line-height: 2.8;
+        line-height: 3.2;
 
         &--prev {
             margin-left: 50px;

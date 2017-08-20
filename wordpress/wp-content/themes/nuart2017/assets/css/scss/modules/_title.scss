@@ -16,22 +16,22 @@
 
             @media screen and (max-width: 800px) {
                 font-size: 34px;
-                line-height: 2;
+                line-height: 2.4;
             }
 
             @media screen and (max-width: $small-break) {
                 font-size: $medium-font;
-                line-height: 2.8;
+                line-height: 3.3;
             }
 
             @media screen and (max-width: 400px) {
                 font-size: 23px;
-                line-height: 3.1;
+                line-height: 3.6;
             }
 
             @media screen and (max-width: $smallest-break) {
                 font-size: $small-font;
-                line-height: 3.6;
+                line-height: 4;
             }
         }
 

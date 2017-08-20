@@ -1,15 +1,17 @@
 @mixin title-text($color) {
-    font-family: 'GraniteHeadline-Regular', Helvetica, Arial, sans-serif;
+    font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
     font-size: $large-font;
-    line-height: 1.3;
+    line-height: 1.7;
     color: $color;
+    text-transform: uppercase;
 }
 
 @mixin subtitle-text($color) {
-    font-family: 'GraniteHeadline-Regular', Helvetica, Arial, sans-serif;
+    font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
     font-size: $medium-font;
-    line-height: 1.6;
+    line-height: 1.9;
     color: $color;
+    text-transform: uppercase;
 }
 
 @mixin large-text($color) {

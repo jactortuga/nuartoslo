@@ -72,7 +72,7 @@
         background-color: $purple;
         cursor: pointer;
         @include subtitle-text($white);
-        line-height: 1;
+        line-height: 1.8;
         -webkit-appearance: none;
         
         &:focus {

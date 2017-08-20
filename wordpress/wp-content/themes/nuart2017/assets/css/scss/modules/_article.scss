@@ -38,12 +38,12 @@
 
                 @media screen and (max-width: $small-break) {
                     font-size: $medium-font;
-                    line-height: 2.8;
+                    line-height: 3.3;
                 }
 
                 @media screen and (max-width: $smallest-break) {
                     font-size: $small-font;
-                    line-height: 3.6;
+                    line-height: 4;
                 }
             }
 
@@ -248,10 +248,10 @@
         margin: 0 auto;
         max-width: $max-paragraph;
         @include title-text($purple);
+        line-height: 1.2;
 
         @media screen and (max-width: $small-break) {
             font-size: $medium-font;
-            line-height: 1.2;
         }
 
         @media screen and (max-width: $smallest-break) {
